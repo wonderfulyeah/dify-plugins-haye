@@ -67,6 +67,18 @@ parameters:
       zh_Hans: MinIO存储桶中的对象/文件名。
     llm_description: A tool to read content from a MinIO bucket.
     form: llm
+  - name: parse_as_text
+    type: boolean
+    required: true
+    default: false
+    label:
+      en_US: Parse Content
+      zh_Hans: 解析内容
+    human_description:
+      en_US: Parse file content as text.
+      zh_Hans: 将文件内容解析为文本内容。
+    llm_description: A tool to read content from a MinIO bucket.
+    form: llm
 extra:
   python:
     source: tools/minio_reader.py
