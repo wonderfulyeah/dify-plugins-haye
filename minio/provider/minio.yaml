@@ -14,6 +14,7 @@ identity:
 tools:
   - tools/minio_reader.yaml
   - tools/minio_writer.yaml
+  - tools/minio_uploader.yaml
 extra:
   python:
     source: provider/minio.py

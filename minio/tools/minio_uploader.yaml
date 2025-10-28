@@ -1,0 +1,83 @@
+identity:
+  name: minio_uploader
+  author: aias00
+  label:
+    en_US: minio_uploader
+    zh_Hans: MinIO文件上传工具
+    pt_BR: minio_uploader
+description:
+  human:
+    en_US: A tool to write generated file to a MinIO bucket.
+    zh_Hans: 将文件写入MinIO存储桶的工具。
+    pt_BR: A tool to write generated file to a MinIO bucket.
+  llm: A tool to write generated file to a MinIO bucket.
+parameters:
+  - name: access_key
+    type: string
+    required: true
+    label:
+      en_US: MinIO Access Key
+      zh_Hans: MinIO访问密钥
+    human_description:
+      en_US: The access key for MinIO authentication.
+      zh_Hans: 用于MinIO身份验证的访问密钥。
+    llm_description: A tool to write generated file to a MinIO bucket.
+    form: form
+  - name: secret_key
+    type: string
+    required: true
+    label:
+      en_US: MinIO Secret Key
+      zh_Hans: MinIO秘密密钥
+    human_description:
+      en_US: The secret key for MinIO authentication.
+      zh_Hans: 用于MinIO身份验证的秘密密钥。
+    llm_description: A tool to write generated file to a MinIO bucket.
+    form: form
+  - name: endpoint
+    type: string
+    required: true
+    label:
+      en_US: MinIO Endpoint URL
+      zh_Hans: MinIO端点URL
+    human_description:
+      en_US: The endpoint URL of the MinIO server (e.g., http://localhost:9000).
+      zh_Hans: MinIO服务器的端点URL（例如 http://localhost:9000）。
+    llm_description: A tool to write generated file to a MinIO bucket.
+    form: form
+  - name: bucket_name
+    type: string
+    required: true
+    label:
+      en_US: Bucket Name
+      zh_Hans: 存储桶名称
+    human_description:
+      en_US: The name of the MinIO bucket to write to.
+      zh_Hans: 要写入的MinIO存储桶名称。
+    llm_description: A tool to write generated file to a MinIO bucket.
+    form: form
+  - name: file
+    type: file
+    required: true
+    label:
+      en_US: file
+      zh_Hans: 文件
+    human_description:
+      en_US: The file to be written to MinIO.
+      zh_Hans: 要写入MinIO的文件。
+    llm_description: A tool to write generated file to a MinIO bucket.
+    form: llm
+  - name: path
+    type: string
+    required: false
+    label:
+      en_US: 路径
+      zh_Hans: 文件上传路径
+    human_description:
+      en_US: File path in MinIO.
+      zh_Hans: 写入MinIO中的文件路径
+    llm_description: A tool to write generated file to a MinIO bucket.
+    form: llm
+extra:
+  python:
+    source: tools/minio_uploader.py
